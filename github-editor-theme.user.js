@@ -95,7 +95,7 @@
 			theme = window.localStorage.getItem(localStorageKey);
 		}
 		if (typeof theme !== 'string' ||
-				typeof ace === 'undefined' ||
+				'undefined' === typeof ace ||
 				!ace.config.modules.hasOwnProperty(theme)) {
 			theme = defaultTheme;
 			setEditorTheme(theme);
