@@ -9,12 +9,12 @@
 // @icon           http://skratchdot.com/favicon.ico
 // @downloadURL    https://github.com/skratchdot/github-editor-theme.user.js/raw/master/github-editor-theme.user.js
 // @updateURL      https://github.com/skratchdot/github-editor-theme.user.js/raw/master/github-editor-theme.user.js
-// @version        1.0
+// @version        1.1
 // ==/UserScript==
 /*global jQuery, ace, CodeEditor */
 /*jslint browser: true, plusplus: true */
 
-var userScript = function () {
+(function () {
 	'use strict';
 
 		// config variables
@@ -143,9 +143,4 @@ var userScript = function () {
 	};
 
 	jQuery(document).ready(init);
-};
-
-// Inject our userScript script
-var script = document.createElement('script');
-script.textContent = '(' + userScript.toString() + ')();';
-document.body.appendChild(script);
+}());
